@@ -1,0 +1,174 @@
+//JP_HS_7
+
+//Spritesets
+
+spriteset (SPRITESET_JP_HS_7, "grf/JP_HS_7.png") {
+	TEMP_TRAIN_DOUBLE_8(0,0,0)
+}
+spritegroup SPRITEGROUP_JP_HS_7 {
+	loading: SPRITESET_JP_HS_7;
+	loaded:  SPRITESET_JP_HS_7;
+}
+
+spriteset (SPRITESET_JP_HS_7_BACK, "grf/JP_HS_7.png") {
+	TEMP_DOUBLE_8_BACK(46,0,0)
+}
+spritegroup SPRITEGROUP_JP_HS_7_BACK {
+	loading: SPRITESET_JP_HS_7_BACK;
+	loaded:  SPRITESET_JP_HS_7_BACK;
+}
+
+spriteset (SPRITESET_PURCH_JP_HS_7, "grf/JP_HS_7.png") {
+	TEMP_PURCH_DUAL_MU(176,0,0,1)
+}
+spriteset (SPRITESET_PURCH_JP_HS_7_COMP, "grf/JP_HS_7.png") {
+	TEMP_PURCH_DUAL_MU_COM(176,14,0,1)
+}
+
+switch(FEAT_TRAINS, SELF, switch_GRF_JP_HS_7, position_in_consist_from_end) {
+    0:      SPRITEGROUP_JP_HS_7_BACK;
+    SPRITEGROUP_JP_HS_7;
+}
+
+//car
+spriteset (SPRITESET_JP_HS_7_PASS, "grf/JP_HS_7.png") {
+	TEMP_CAR_8_NEW(23,0,0)
+}
+spritegroup SPRITEGROUP_JP_HS_7_PASS {
+	loading: SPRITESET_JP_HS_7_PASS;
+	loaded:  SPRITESET_JP_HS_7_PASS;
+}
+spriteset (SPRITESET_JP_HS_7_MAIL, "grf/JP_HS_7.png") {
+	TEMP_CAR_8_NEW(69,0,0)
+}
+spritegroup SPRITEGROUP_JP_HS_7_MAIL {
+	loading: SPRITESET_JP_HS_7_MAIL;
+	loaded:  SPRITESET_JP_HS_7_MAIL;
+}
+
+//2cc
+spriteset (SPRITESET_JP_HS_7_CC, "grf/JP_HS_7.png") {
+	TEMP_TRAIN_DOUBLE_8(0+92,0,0)
+}
+spritegroup SPRITEGROUP_JP_HS_7_CC {
+	loading: SPRITESET_JP_HS_7_CC;
+	loaded:  SPRITESET_JP_HS_7_CC;
+}
+
+spriteset (SPRITESET_JP_HS_7_BACK_CC, "grf/JP_HS_7.png") {
+	TEMP_DOUBLE_8_BACK(46+92,0,0)
+}
+spritegroup SPRITEGROUP_JP_HS_7_BACK_CC {
+	loading: SPRITESET_JP_HS_7_BACK_CC;
+	loaded:  SPRITESET_JP_HS_7_BACK_CC;
+}
+
+spriteset (SPRITESET_PURCH_JP_HS_7_CC, "grf/JP_HS_7.png") {
+	TEMP_PURCH_DUAL_MU(176,0+28,0,1)
+}
+spriteset (SPRITESET_PURCH_JP_HS_7_COMP_CC, "grf/JP_HS_7.png") {
+	TEMP_PURCH_DUAL_MU_COM(176,14+28,0,1)
+}
+
+switch(FEAT_TRAINS, SELF, switch_GRF_JP_HS_7_CC, position_in_consist_from_end) {
+    0:      SPRITEGROUP_JP_HS_7_BACK_CC;
+    SPRITEGROUP_JP_HS_7_CC;
+}
+
+//car
+spriteset (SPRITESET_JP_HS_7_PASS_CC, "grf/JP_HS_7.png") {
+	TEMP_CAR_8_NEW(115,0,0)
+}
+spritegroup SPRITEGROUP_JP_HS_7_PASS_CC {
+	loading: SPRITESET_JP_HS_7_PASS_CC;
+	loaded:  SPRITESET_JP_HS_7_PASS_CC;
+}
+
+spriteset (SPRITESET_JP_HS_7_MAIL_CC, "grf/JP_HS_7.png") {
+	TEMP_CAR_8_NEW(69+92,0,0)
+}
+spritegroup SPRITEGROUP_JP_HS_7_MAIL_CC {
+	loading: SPRITESET_JP_HS_7_MAIL_CC;
+	loaded:  SPRITESET_JP_HS_7_MAIL_CC;
+}
+
+switch(FEAT_TRAINS,SELF,switch_JP_HS_7_PASS_CC,PARAM2CC){
+    1: return SPRITEGROUP_JP_HS_7_PASS_CC;
+       return SPRITEGROUP_JP_HS_7_PASS;
+}
+
+switch(FEAT_TRAINS,SELF,switch_JP_HS_7_MAIL_CC,PARAM2CC){
+    1: return SPRITEGROUP_JP_HS_7_MAIL_CC;
+       return SPRITEGROUP_JP_HS_7_MAIL;
+}
+
+switch(FEAT_TRAINS,SELF,switch_JP_HS_7_CC,PARAM2CC){
+    1: return switch_GRF_JP_HS_7_CC;
+       return switch_GRF_JP_HS_7;
+}
+
+switch(FEAT_TRAINS,SELF,switch_JP_HS_7_purchase,PURCHASE){
+    1: return SPRITESET_PURCH_JP_HS_7_COMP;
+       return SPRITESET_PURCH_JP_HS_7;
+}
+switch(FEAT_TRAINS,SELF,switch_JP_HS_7_purchase_CC,PURCHASE){
+    1: return SPRITESET_PURCH_JP_HS_7_COMP_CC;
+       return SPRITESET_PURCH_JP_HS_7_CC;
+}
+
+switch(FEAT_TRAINS,SELF,switch_JP_HS_7_purch_CC,PARAM2CC){
+    1: return switch_JP_HS_7_purchase_CC;
+       return switch_JP_HS_7_purchase;
+}
+
+item(FEAT_TRAINS, JP_HS_7, ITEM_JP_HS_7) {
+	property {
+		//Constants
+		model_life:	JP_HS_7_life;
+		retire_early: 10;
+		reliability_decay:	12;
+		vehicle_life: 60;
+		refittable_cargo_classes: bitmask(CC_PASSENGERS);
+		cargo_allow_refit: [PASS, TOUR];
+		LOADINGSPEED_HIGHSPEED
+		running_cost_base: RUNNING_COST_ELECTRIC;
+		sprite_id: SPRITE_ID_NEW_TRAIN;
+		track_type: EDS_MAGLEV;
+		ai_special_flag: AI_FLAG_PASSENGER;
+		refit_cost: 0;
+		default_cargo_type: PASS;
+		visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, ENABLE_WAGON_POWER);
+		effect_spawn_model_and_powered: EFFECT_SPAWN_MODEL_NONE;
+		engine_class: ENGINE_CLASS_MAGLEV;
+		
+		//Variables
+		name:	string(STR_NAME_JP_HS_7);
+		REGION(JAPANHS, NOREGION);
+		introduction_date:	date(JP_HS_7_year,01,01);
+		cost_factor: COSTPARAM(PARAM_CONST_HS,JP_HS_7_pc);
+		running_cost_factor: COSTPARAM(PARAM_RUN_HS,JP_HS_7_rc);
+		speed: JP_HS_7_speed km/h;
+		power: JP_HS_7_power kW;
+		cargo_capacity: 24;
+		weight: JP_HS_7_mass tons;
+		air_drag_coefficient: JP_HS_7_ar;
+		
+		length: 8;
+		dual_headed: 1;
+		misc_flags: bitmask(TRAIN_FLAG_TILT, TRAIN_FLAG_MU, TRAIN_FLAG_2CC);
+	}
+	graphics {
+		default: switch_JP_HS_7_CC; // Use this group
+		purchase: switch_JP_HS_7_purch_CC; // Use this set for the menu
+		additional_text: return string(STR_DESC_JP_HS_7);
+		can_attach_wagon: switch_can_attach_vehicle;
+	}
+	livery_override (ITEM_JP_HS_MAIL) {
+		power: JP_HS_7_car_power;	
+		default: switch_JP_HS_7_MAIL_CC;
+	}
+	livery_override (ITEM_JP_HS_PASS) {
+		power: JP_HS_7_car_power;	
+		default: switch_JP_HS_7_PASS_CC;
+	}
+}

@@ -1,0 +1,27 @@
+#define RANGE_ZH_DE			0x200..0x2FF
+#define ITEM_ZH_DE_PASS		0x200
+#define ITEM_ZH_DE_MAIL		0x201
+
+#define ITEM_ZH_DE_1		0x202
+#define ZH_DE_1_year		2018
+#define ZH_DE_1_mass		18
+#define ZH_DE_1_speed		170
+#define ZH_DE_1_ar			0.067
+#define ZH_DE_1_power		4567
+#define ZH_DE_1_pc			53
+#define ZH_DE_1_rc			40
+#define ZH_DE_1_car_power	326
+#define ZH_DE_1_capacity	197
+#define ZH_DE_1_life		VEHICLE_NEVER_EXPIRES
+
+#define ITEM_ZH_DE_2		0x203
+#define ZH_DE_2_year		2024
+#define ZH_DE_2_mass		17.6
+#define ZH_DE_2_speed		190
+#define ZH_DE_2_ar			0.067
+#define ZH_DE_2_power		4568
+#define ZH_DE_2_pc			49
+#define ZH_DE_2_rc			31
+#define ZH_DE_2_car_power	326
+#define ZH_DE_2_capacity	210
+#define ZH_DE_2_life		VEHICLE_NEVER_EXPIRES

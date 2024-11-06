@@ -1,0 +1,15 @@
+#define RANGE_ZH_MG_2		0x600..0x6FF
+#define ITEM_ZH_MG_2_PASS	0x600
+#define ITEM_ZH_MG_2_MAIL	0x601
+
+#define ITEM_ZH_MG_2_1		0x602
+#define ZH_MG_2_1_year		2021
+#define ZH_MG_2_1_mass		31.2
+#define ZH_MG_2_1_speed		190
+#define ZH_MG_2_1_ar		0.050
+#define ZH_MG_2_1_power		3942
+#define ZH_MG_2_1_pc		110
+#define ZH_MG_2_1_rc		43
+#define ZH_MG_2_1_car_power	409
+#define ZH_MG_2_1_life		VEHICLE_NEVER_EXPIRES
+//#define ZH_MG_2_1_life		45

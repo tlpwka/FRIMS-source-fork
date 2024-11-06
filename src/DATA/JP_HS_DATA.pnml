@@ -1,0 +1,80 @@
+#define RANGE_JP_HS			0x000..0x0FF
+#define ITEM_JP_HS_PASS		0x000
+#define ITEM_JP_HS_MAIL		0x001
+
+#define ITEM_JP_HS_1		0x002
+#define JP_HS_1_year		2045
+#define JP_HS_1_mass		25.0
+#define JP_HS_1_speed		630
+#define JP_HS_1_ar			0.013
+#define JP_HS_1_power		3555
+#define JP_HS_1_pc			133
+#define JP_HS_1_rc			129
+#define JP_HS_1_car_power	593
+#define JP_HS_1_life		42
+
+#define ITEM_JP_HS_2		0x003
+#define JP_HS_2_year		2057
+#define JP_HS_2_mass		23.6
+#define JP_HS_2_speed		675
+#define JP_HS_2_ar			0.012
+#define JP_HS_2_power		3907
+#define JP_HS_2_pc			141
+#define JP_HS_2_rc			135
+#define JP_HS_2_car_power	651
+#define JP_HS_2_life		42
+
+#define ITEM_JP_HS_3		0x004
+#define JP_HS_3_year		2069
+#define JP_HS_3_mass		22.8
+#define JP_HS_3_speed		720
+#define JP_HS_3_ar			0.011
+#define JP_HS_3_power		4474
+#define JP_HS_3_pc			149
+#define JP_HS_3_rc			140
+#define JP_HS_3_car_power	746
+#define JP_HS_3_life		VEHICLE_NEVER_EXPIRES
+
+#define ITEM_JP_HS_4		0x005
+#define JP_HS_4_year		2081
+#define JP_HS_4_mass		28.9
+#define JP_HS_4_speed		750
+#define JP_HS_4_ar			0.011
+#define JP_HS_4_power		6259
+#define JP_HS_4_pc			172
+#define JP_HS_4_rc			174
+#define JP_HS_4_car_power	1043
+#define JP_HS_4_life		VEHICLE_NEVER_EXPIRES
+
+#define ITEM_JP_HS_5		0x006
+#define JP_HS_5_year		2096
+#define JP_HS_5_mass		22.5
+#define JP_HS_5_speed		750
+#define JP_HS_5_ar			0.011
+#define JP_HS_5_power		4759
+#define JP_HS_5_pc			155
+#define JP_HS_5_rc			137
+#define JP_HS_5_car_power	793
+#define JP_HS_5_life		VEHICLE_NEVER_EXPIRES
+
+#define ITEM_JP_HS_6		0x007
+#define JP_HS_6_year		2119
+#define JP_HS_6_mass		22.7
+#define JP_HS_6_speed		775
+#define JP_HS_6_ar			0.010
+#define JP_HS_6_power		5223
+#define JP_HS_6_pc			160
+#define JP_HS_6_rc			138
+#define JP_HS_6_car_power	870
+#define JP_HS_6_life		VEHICLE_NEVER_EXPIRES
+
+#define ITEM_JP_HS_7		0x008
+#define JP_HS_7_year		2126
+#define JP_HS_7_mass		22.5
+#define JP_HS_7_speed		800
+#define JP_HS_7_ar			0.010
+#define JP_HS_7_power		5358
+#define JP_HS_7_pc			164
+#define JP_HS_7_rc			139
+#define JP_HS_7_car_power	893
+#define JP_HS_7_life		VEHICLE_NEVER_EXPIRES

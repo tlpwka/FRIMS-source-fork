@@ -1,0 +1,7 @@
+#define LOADINGSPEED(basespeed) (LOADSPEEDPARAM == 0) ? basespeed/2 : (LOADSPEEDPARAM == 2) ? basespeed*2 : basespeed
+
+#define LOADINGSPEED_HIGHSPEED loading_speed: LOADINGSPEED(16);
+
+#define LOADINGSPEED_URBAN loading_speed: LOADINGSPEED(40);
+
+#define LOADINGSPEED_CARGO loading_speed: LOADINGSPEED(20);

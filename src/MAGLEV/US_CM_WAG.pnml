@@ -1,0 +1,71 @@
+//Spritesets
+spriteset (SPRITESET_PURCH_US_CM_WAG, "grf/US_CM_2.png") {
+	TEMP_PURCH_SINGLE_NEW(96,14,0,1)
+}
+spriteset (SPRITESET_PURCH_US_CM_WAG_COMP, "grf/US_CM_2.png") {
+	TEMP_PURCH_SINGLE_NEW_COM(96,42,0,1)
+}
+
+switch(FEAT_TRAINS,SELF,switch_US_CM_WAG_purchase,PURCHASE){
+    1: return SPRITESET_PURCH_US_CM_WAG_COMP;
+       return SPRITESET_PURCH_US_CM_WAG;
+}
+
+//2cc
+spriteset (SPRITESET_PURCH_US_CM_WAG_CC, "grf/US_CM_2.png") {
+	TEMP_PURCH_SINGLE_NEW(96,14+56,0,1)
+}
+spriteset (SPRITESET_PURCH_US_CM_WAG_COMP_CC, "grf/US_CM_2.png") {
+	TEMP_PURCH_SINGLE_NEW_COM(96,42+56,0,1)
+}
+
+switch(FEAT_TRAINS,SELF,switch_US_CM_WAG_purchase_CC,PURCHASE){
+    1: return SPRITESET_PURCH_US_CM_WAG_COMP_CC;
+       return SPRITESET_PURCH_US_CM_WAG_CC;
+}
+
+switch(FEAT_TRAINS,SELF,switch_US_CM_WAG_purch_CC,PARAM2CC){
+    1: return switch_US_CM_WAG_purchase_CC;
+       return switch_US_CM_WAG_purchase;
+}
+
+		//Passenger Car
+item(FEAT_TRAINS, US_CM_WAG, ITEM_US_CM_WAG) {
+	property {
+		//Basic
+		model_life:	VEHICLE_NEVER_EXPIRES;
+		reliability_decay: 7;
+		vehicle_life: 45;
+		refittable_cargo_classes: ALL_CARGO_CLASSES & ~bitmask(CC_PASSENGERS, CC_MAIL);\
+		LOADINGSPEED_CARGO
+		running_cost_base: RUNNING_COST_ELECTRIC;
+		misc_flags: bitmask(TRAIN_FLAG_2CC);
+		sprite_id: SPRITE_ID_NEW_TRAIN;
+		track_type: INDUCTION_MGLV;
+		ai_special_flag: AI_FLAG_CARGO;
+		default_cargo_type: GOOD;
+		visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, ENABLE_WAGON_POWER);
+		effect_spawn_model_and_powered: EFFECT_SPAWN_MODEL_NONE;
+		refit_cost: 0;
+		engine_class: ENGINE_CLASS_MAGLEV;
+		
+		//Trains
+		name: string(STR_NAME_US_CM_WAG);
+		REGION(US, NOREGION);
+		introduction_date:	date(2021,01,01);
+		cost_factor: COSTPARAM(PARAM_CONST,40);
+		running_cost_factor: COSTPARAM(PARAM_RUN,5);
+		power: 0 kW;
+		cargo_capacity: 100;
+		weight: 11.5 tons;
+		
+		length: 7;
+		dual_headed: 0;
+		misc_flags: bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_AUTOREFIT);
+	}
+	graphics {
+		default: switch_US_CM_1_WAG_CC; // Use this switch to set sprite
+		purchase: switch_US_CM_WAG_purch_CC;
+		additional_text: return string(STR_DESC_US_CM_WAG);
+	}
+}

@@ -1,0 +1,50 @@
+//Shamelessly stolen from the 2cc set.
+
+//Check vehicle ID of the vehicle in front of the unit wagon being attached
+//The offset for var 61 is determined by position_in_consist_from_end, which results in the last wagon before the vehicle being attached
+
+
+//Korean Maglevs do not accept anything other than themselves
+switch(FEAT_TRAINS, PARENT, switch_can_attach_JP_HS, [STORE_TEMP(position_in_consist_from_end, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+	RANGE_JP_HS: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Allow
+	CB_RESULT_ATTACH_DISALLOW;
+}
+switch(FEAT_TRAINS, PARENT, switch_can_attach_SK_HS, [STORE_TEMP(position_in_consist_from_end, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+	RANGE_SK_HS: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Allow
+	CB_RESULT_ATTACH_DISALLOW;
+}
+switch(FEAT_TRAINS, PARENT, switch_can_attach_ZH_HS, [STORE_TEMP(position_in_consist_from_end, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+	RANGE_ZH_HS: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Allow
+	CB_RESULT_ATTACH_DISALLOW;
+}
+switch(FEAT_TRAINS, PARENT, switch_can_attach_ZH_MG_2, [STORE_TEMP(position_in_consist_from_end, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+	RANGE_ZH_MG_2: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Allow
+	CB_RESULT_ATTACH_DISALLOW;
+}
+switch(FEAT_TRAINS, PARENT, switch_can_attach_ZH_MG_3, [STORE_TEMP(position_in_consist_from_end, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+	RANGE_ZH_MG_3: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Allow
+	CB_RESULT_ATTACH_DISALLOW;
+}
+switch(FEAT_TRAINS, PARENT, switch_can_attach_ZH_DE, [STORE_TEMP(position_in_consist_from_end, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+	RANGE_ZH_DE: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Allow
+	CB_RESULT_ATTACH_DISALLOW;
+}
+switch(FEAT_TRAINS, PARENT, switch_can_attach_US_CM, [STORE_TEMP(position_in_consist_from_end, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+	RANGE_US_CM: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Allow
+	CB_RESULT_ATTACH_DISALLOW;
+}
+
+/*	Check vehicle ID to determine which case we have. 
+ *	Engines are always allowed
+ *	Wagons depend on vehicle in front of it
+*/
+switch(FEAT_TRAINS, SELF, switch_can_attach_vehicle, vehicle_type_id) {
+	RANGE_JP_HS: switch_can_attach_JP_HS;
+	RANGE_SK_HS: switch_can_attach_SK_HS;
+	RANGE_ZH_HS: switch_can_attach_ZH_HS;
+	RANGE_ZH_MG_2: switch_can_attach_ZH_MG_2;
+	RANGE_ZH_MG_3: switch_can_attach_ZH_MG_3;
+	RANGE_ZH_DE: switch_can_attach_ZH_DE;
+	RANGE_US_CM: switch_can_attach_US_CM;
+	CB_RESULT_ATTACH_DISALLOW;
+}

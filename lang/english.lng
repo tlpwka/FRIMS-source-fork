@@ -1,0 +1,165 @@
+##grflangid 0x01
+# 0x01 -> English
+
+# General GRF strings
+STR_GRF_NAME	:FRIMS - Future Reality Inspired Maglev Set 1.1
+STR_GRF_DESC	:Contains many new fictional trains throughout the remainder of the 21st century. Based on real maglev projects. Made for use with RIMS - Real International Maglev Set. {}{COPYRIGHT}2018-2019 Erato Nysiad{}License:CC BY-NC 4.0{}
+
+# Vehicle strings
+#SC Maglev
+STR_NAME_JP_HS_1		:L200 Series Shinkansen
+STR_DESC_JP_HS_1		:{BLACK}Railtype: {GOLD}SC Maglev{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {GREEN}JR EAST 
+STR_NAME_JP_HS_2		:L100 Series Shinkansen
+STR_DESC_JP_HS_2		:{BLACK}Railtype: {GOLD}SC Maglev{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {BLUE}JR WEST 
+STR_NAME_JP_HS_3		:L300 Series Shinkansen
+STR_DESC_JP_HS_3		:{BLACK}Railtype: {GOLD}SC Maglev{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {GOLD}JR CENTRAL 
+STR_NAME_JP_HS_4		:L400 Series Shinkansen
+STR_DESC_JP_HS_4		:{BLACK}Railtype: {GOLD}SC Maglev{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {GOLD}JR EAST 
+STR_NAME_JP_HS_5		:L500 Series Shinkansen
+STR_DESC_JP_HS_5		:{BLACK}Railtype: {GOLD}SC Maglev{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {BLUE}JR WEST 
+STR_NAME_JP_HS_6		:L700 Series Shinkansen
+STR_DESC_JP_HS_6		:{BLACK}Railtype: {GOLD}SC Maglev{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {LTBLUE}JR SHIKOKU 
+STR_NAME_JP_HS_7		:L900 Series Shinkansen
+STR_DESC_JP_HS_7		:{BLACK}Railtype: {GOLD}SC Maglev{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {GOLD}JR CENTRAL 
+
+STR_NAME_JP_HS_PASS		:SC-Maglev - Passenger Coach
+STR_NAME_JP_HS_MAIL		:SC-Maglev - Mail Carriage
+STR_DESC_JP_HS_PASS		:{BLACK}Railtype: {GOLD}SC Maglev{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {LTBLUE}JR SHIKOKU {BLUE}JR WEST {GOLD}JR CENTRAL {GREEN}JR EAST{}{GOLD}NOTES: {BLACK}Can only be attached to the SC-Maglev Trains.
+STR_DESC_JP_HS_MAIL		:{BLACK}Railtype: {GOLD}SC Maglev{}{BLACK}Usage: {BLUE}Express mail{BLACK}{}{BLACK}Operators: {LTBLUE}JR SHIKOKU {BLUE}JR WEST {GOLD}JR CENTRAL {GREEN}JR EAST{}{GOLD}NOTES: {BLACK}Can only be attached to the SC-Maglev Trains.
+#SUMA
+STR_NAME_SK_HS_1		:SUMA 550
+STR_DESC_SK_HS_1		:{BLACK}Railtype: {GOLD}SUMA{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {BLUE}KT{RED}X 
+STR_NAME_SK_HS_2		:SUMA 600
+STR_DESC_SK_HS_2		:{BLACK}Railtype: {GOLD}SUMA{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {BLUE}KT{RED}X 
+STR_NAME_SK_HS_3		:SUMA 650
+STR_DESC_SK_HS_3		:{BLACK}Railtype: {GOLD}SUMA{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {BLUE}KT{RED}X 
+STR_NAME_SK_HS_4		:SUMA 700
+STR_DESC_SK_HS_4		:{BLACK}Railtype: {GOLD}SUMA{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {BLUE}KT{RED}X 
+
+STR_NAME_SK_HS_PASS		:SUMA - Passenger Coach
+STR_NAME_SK_HS_MAIL		:SUMA - Mail Carriage
+STR_DESC_SK_HS_PASS		:{BLACK}Railtype: {GOLD}SUMA{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {BLUE}KT{RED}X{}{GOLD}NOTES: {BLACK}Can only be attached to the SUMA Trains.
+STR_DESC_SK_HS_MAIL		:{BLACK}Railtype: {GOLD}SUMA{}{BLACK}Usage: {BLUE}Express mail{BLACK}{}{BLACK}Operators: {BLUE}KT{RED}X{}{GOLD}NOTES: {BLACK}Can only be attached to the SUMA Trains.
+#DE
+STR_NAME_ZH_DE_1		:Transport System Bögl
+STR_DESC_ZH_DE_1		:{BLACK}Railtype: {GOLD}M-Bahn{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}Max Bögl
+STR_NAME_ZH_DE_2		:Xinzhu-01
+STR_DESC_ZH_DE_2		:{BLACK}Railtype: {GOLD}M-Bahn{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}Xinzhu
+STR_NAME_ZH_DE_3		:Xinzhu-02
+STR_DESC_ZH_DE_3		:{BLACK}Railtype: {GOLD}M-Bahn{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}Xinzhu
+
+STR_NAME_ZH_DE_PASS		:M-Bahn - Passenger Coach
+STR_NAME_ZH_DE_MAIL		:M-Bahn - Mail Carriage
+STR_DESC_ZH_DE_PASS		:{BLACK}Railtype: {GOLD}M-Bahn{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}Max Bögl, Xinzhu{}{GOLD}NOTES: {BLACK}Can only be attached to the M-Bahn Trains.
+STR_DESC_ZH_DE_MAIL		:{BLACK}Railtype: {GOLD}M-Bahn{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}Max Bögl, Xinzhu{}{GOLD}NOTES: {BLACK}Can only be attached to the M-Bahn Trains.
+#US
+STR_NAME_US_CM_1		:ECCO
+STR_DESC_US_CM_1		:{BLACK}Railtype: {GOLD}Urban Maglev{}{BLACK}Usage: {RED}Freight{BLACK}{}{BLACK}Operators: {BLUE}General Atomics
+STR_NAME_US_CM_2		:ECJET
+STR_DESC_US_CM_2		:{BLACK}Railtype: {GOLD}Urban Maglev{}{BLACK}Usage: {RED}Freight{BLACK}{}{BLACK}Operators: {BLUE}General Atomics
+
+STR_NAME_US_CM_WAG		:ECCO - Cargo wagon
+STR_DESC_US_CM_WAG		:{BLACK}Railtype: {GOLD}Urban Maglev{}{BLACK}Usage: {RED}Freight{BLACK}{}{BLACK}Operators: {BLUE}General Atomics{}{GOLD}NOTES: {BLACK}Can only be attached to the ECCO and ECJET Trains.
+#ZH HS
+STR_NAME_ZH_HS_1		:CR600MF "LanXing"
+STR_DESC_ZH_HS_1		:{BLACK}Railtype: {GOLD}Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC
+STR_NAME_ZH_HS_2		:Chinese High Speed Maglev 600
+STR_DESC_ZH_HS_2		:{BLACK}Railtype: {GOLD}Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC
+STR_NAME_ZH_HS_3		:Chinese High Speed Maglev 650
+STR_DESC_ZH_HS_3		:{BLACK}Railtype: {GOLD}Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC
+STR_NAME_ZH_HS_4		:Chinese High Speed Maglev 700
+STR_DESC_ZH_HS_4		:{BLACK}Railtype: {GOLD}Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC
+
+STR_NAME_ZH_HS_PASS		:Chinese High Speed Maglev - Passenger Coach
+STR_NAME_ZH_HS_MAIL		:Chinese High Speed Maglev - Mail Carriage
+STR_DESC_ZH_HS_PASS		:{BLACK}Railtype: {GOLD}Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC{}{GOLD}NOTES: {BLACK}Can only be attached to the Chinese High Speed Maglev Trains.
+STR_DESC_ZH_HS_MAIL		:{BLACK}Railtype: {GOLD}Transrapid{}{BLACK}Usage: {BLUE}Express mail{BLACK}{}{BLACK}Operators: {RED}CRRC{}{GOLD}NOTES: {BLACK}Can only be attached to the Chinese High Speed Maglev Trains.
+#ZH MG2.0
+STR_NAME_ZH_MG_2_1		:Luchong
+STR_DESC_ZH_MG_2_1		:{BLACK}Railtype: {GOLD}Urban Maglev{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}CRRC{}{BLACK}Generation: {GOLD}Maglev 2.0
+STR_NAME_ZH_MG_2_2		:Chinese Maglev 2.0 600
+STR_DESC_ZH_MG_2_2		:{BLACK}Railtype: {GOLD}Urban Maglev{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}CRRC{}{BLACK}Generation: {GOLD}Maglev 2.0
+STR_NAME_ZH_MG_2_3		:Chinese Maglev 2.0 650
+STR_DESC_ZH_MG_2_3		:{BLACK}Railtype: {GOLD}Urban Maglev{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}CRRC{}{BLACK}Generation: {GOLD}Maglev 2.0
+STR_NAME_ZH_MG_2_4		:Chinese Maglev 2.0 700
+STR_DESC_ZH_MG_2_4		:{BLACK}Railtype: {GOLD}Urban Maglev{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}CRRC
+
+STR_NAME_ZH_MG_2_PASS		:Chinese Maglev 2.0 - Passenger Coach
+STR_NAME_ZH_MG_2_MAIL		:Chinese Maglev 2.0 - Mail Carriage
+STR_DESC_ZH_MG_2_PASS		:{BLACK}Railtype: {GOLD}Urban Maglev{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}CRRC{}{GOLD}NOTES: {BLACK}Can only be attached to the Chinese Maglev 2.0 Trains.
+STR_DESC_ZH_MG_2_MAIL		:{BLACK}Railtype: {GOLD}Urban Maglev{}{BLACK}Usage: {GREEN}Commuter train{BLACK} - {GOLD}Faster loading{BLACK}{}{BLACK}Operators: {RED}CRRC{}{GOLD}NOTES: {BLACK}Can only be attached to the Chinese Maglev 2.0 Trains.
+#ZH MG3.0
+STR_NAME_ZH_MG_3_1		:Tianlong
+STR_DESC_ZH_MG_3_1		:{BLACK}Railtype: {GOLD}Urban Maglev or Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC{}{BLACK}Generation: {GOLD}Maglev 3.0
+STR_NAME_ZH_MG_3_2		:Chinese Maglev 3.0 600
+STR_DESC_ZH_MG_3_2		:{BLACK}Railtype: {GOLD}Urban Maglev or Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC{}{BLACK}Generation: {GOLD}Maglev 3.0
+STR_NAME_ZH_MG_3_3		:Chinese Maglev 3.0 650
+STR_DESC_ZH_MG_3_3		:{BLACK}Railtype: {GOLD}Urban Maglev or Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC{}{BLACK}Generation: {GOLD}Maglev 3.0
+STR_NAME_ZH_MG_3_4		:Chinese Maglev 3.0 700
+STR_DESC_ZH_MG_3_4		:{BLACK}Railtype: {GOLD}Urban Maglev or Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC{}{BLACK}Generation: {GOLD}Maglev 3.0
+
+STR_NAME_ZH_MG_3_PASS		:Chinese Maglev 3.0 - Passenger Coach
+STR_NAME_ZH_MG_3_MAIL		:Chinese Maglev 3.0 - Mail Carriage
+STR_DESC_ZH_MG_3_PASS		:{BLACK}Railtype: {GOLD}Urban Maglev or Transrapid{}{BLACK}Usage: {BLUE}Express passengers{BLACK}{}{BLACK}Operators: {RED}CRRC{}{GOLD}NOTES: {BLACK}Can only be attached to the Chinese Maglev 3.0 Trains.
+STR_DESC_ZH_MG_3_MAIL		:{BLACK}Railtype: {GOLD}Urban Maglev or Transrapid{}{BLACK}Usage: {BLUE}Express mail{BLACK}{}{BLACK}Operators: {RED}CRRC{}{GOLD}NOTES: {BLACK}Can only be attached to the Chinese Maglev 3.0 Trains.
+
+#Parameter Strings
+STR_LOAD				:Load speed
+STR_LOAD_DESC			:Set the loading speed of this set
+STR_LOAD_0				:Slow
+STR_LOAD_1				:Normal (Default)
+STR_LOAD_2				:Fast
+
+STR_CC_0				:/4
+STR_CC_1				:/2
+STR_CC_1A				:/2 (Japan Set)
+STR_CC_2				:x1 (Default)
+STR_CC_2A				:x1 (Default) (2CC)
+STR_CC_5				:x1.25 (2CC)
+STR_CC_5A				:x1.25
+STR_CC_3				:x2
+STR_CC_4				:x4
+STR_CC_4A				:x4 (Japan Set)
+
+
+STR_CC					:Low speed purchase cost multiplier
+STR_RC					:Low speed running cost multiplier
+STR_CC_DESC				:This setting can be used to tweak the cost of the low speed trains
+STR_RC_DESC				:This setting can be used to tweak the cost of the low speed trains
+STR_CC_HS				:High speed purchase cost multiplier
+STR_RC_HS				:High speed running cost multiplier
+STR_CC_HS_DESC			:This setting can be used to tweak the cost of the high speed trains
+STR_RC_HS_DESC			:This setting can be used to tweak the cost of the high speed trains
+
+STR_PARAM_PURCHASE		:Use company purchase window graphics instead of country flags
+STR_PARAM_PURCHASE_DESC	:If enabled the purchase window graphics will be like the graphics used for TIAS, Keio, E001 one off and NATS trainsets. If disabled, the purchase windows graphics will be like the graphics used for the 2CC trainset.
+
+STR_PARAM_2CC			:Use company colours graphics instead of real colours
+STR_PARAM_2CC_DESC		:If enabled the trains will use the company colours, instead of the real colours. This also disables real liveries. This way the trains match the look of the trains in the 2CC trainset.
+
+STR_PARAM_LSCAR			:Provide carriages to customise the length of several low-speed maglevs. NOT YET IMPLEMENTED.
+STR_PARAM_LSCAR_DESC	:If enabled the low speed maglevs will become multiple units to which you can add special multiple unit carriages. Not yet implemented. Please do not file reports regarding this paramter. Turning it off will disable all trains that will eventually receive a fixed length version. This is intended behaviour.
+
+STR_PARAM_JAPANLS			:Japanese Low Speed
+STR_PARAM_JAPANLS_DESC		:Use Japanese low speed maglev trains
+STR_PARAM_JAPANHS			:Japanese High Speed
+STR_PARAM_JAPANHS_DESC		:Use Japanese high speed maglev trains
+
+STR_PARAM_SKLS				:South Korean Low Speed
+STR_PARAM_SKLS_DESC			:Use South Korean low speed maglev trains
+STR_PARAM_SKHS				:South Korean High Speed
+STR_PARAM_SKHS_DESC			:Use South Korean high speed maglev trains
+
+STR_PARAM_CHINALS			:Chinese Low Speed
+STR_PARAM_CHINALS_DESC		:Use Chinese low speed maglev trains
+STR_PARAM_CHINAHS			:Chinese High Speed
+STR_PARAM_CHINAHS_DESC		:Use Chinese high speed maglev trains
+
+STR_PARAM_GERMANY			:Germany
+STR_PARAM_GERMANY_DESC		:Use German maglev trains
+
+STR_PARAM_US				:United States
+STR_PARAM_US_DESC			:Use American maglev trains
+
+# Misc Strings
+STR_DESC_PASS			:This generic carriage can be used to create maglev vehicles of the desired length. Passenger count, weight, length, etc. will automatically change.

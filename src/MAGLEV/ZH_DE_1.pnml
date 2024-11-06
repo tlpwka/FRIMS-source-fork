@@ -1,0 +1,174 @@
+//ZH_DE_1
+
+//Spritesets
+
+spriteset (SPRITESET_ZH_DE_1, "grf/ZH_DE_1.png") {
+	TEMP_TRAIN_DOUBLE_8(0,0,1)
+}
+spritegroup SPRITEGROUP_ZH_DE_1 {
+	loading: SPRITESET_ZH_DE_1;
+	loaded:  SPRITESET_ZH_DE_1;
+}
+
+spriteset (SPRITESET_ZH_DE_1_BACK, "grf/ZH_DE_1.png") {
+	TEMP_DOUBLE_8_BACK(24,0,1)
+}
+spritegroup SPRITEGROUP_ZH_DE_1_BACK {
+	loading: SPRITESET_ZH_DE_1_BACK;
+	loaded:  SPRITESET_ZH_DE_1_BACK;
+}
+
+spriteset (SPRITESET_PURCH_ZH_DE_1, "grf/ZH_DE_1.png") {
+	TEMP_PURCH_DUAL_MU(176,0,0,1)
+}
+spriteset (SPRITESET_PURCH_ZH_DE_1_COMP, "grf/ZH_DE_1.png") {
+	TEMP_PURCH_DUAL_MU_COM(176,14*3,0,1)
+}
+
+switch(FEAT_TRAINS, SELF, switch_GRF_ZH_DE_1, position_in_consist_from_end) {
+    0:      SPRITEGROUP_ZH_DE_1_BACK;
+    SPRITEGROUP_ZH_DE_1;
+}
+
+//car
+spriteset (SPRITESET_ZH_DE_1_PASS, "grf/ZH_DE_1.png") {
+	TEMP_CAR_8_NEW(48,0,1)
+}
+spritegroup SPRITEGROUP_ZH_DE_1_PASS {
+	loading: SPRITESET_ZH_DE_1_PASS;
+	loaded:  SPRITESET_ZH_DE_1_PASS;
+}
+spriteset (SPRITESET_ZH_DE_1_MAIL, "grf/ZH_DE_1.png") {
+	TEMP_CAR_8_NEW(72,0,1)
+}
+spritegroup SPRITEGROUP_ZH_DE_1_MAIL {
+	loading: SPRITESET_ZH_DE_1_MAIL;
+	loaded:  SPRITESET_ZH_DE_1_MAIL;
+}
+
+//2cc
+spriteset (SPRITESET_ZH_DE_1_CC, "grf/ZH_DE_1.png") {
+	TEMP_TRAIN_DOUBLE_8(0+96,0,1)
+}
+spritegroup SPRITEGROUP_ZH_DE_1_CC {
+	loading: SPRITESET_ZH_DE_1_CC;
+	loaded:  SPRITESET_ZH_DE_1_CC;
+}
+
+spriteset (SPRITESET_ZH_DE_1_BACK_CC, "grf/ZH_DE_1.png") {
+	TEMP_DOUBLE_8_BACK(24+96,0,1)
+}
+spritegroup SPRITEGROUP_ZH_DE_1_BACK_CC {
+	loading: SPRITESET_ZH_DE_1_BACK_CC;
+	loaded:  SPRITESET_ZH_DE_1_BACK_CC;
+}
+
+spriteset (SPRITESET_PURCH_ZH_DE_1_CC, "grf/ZH_DE_1.png") {
+	TEMP_PURCH_DUAL_MU(176,84,0,1)
+}
+spriteset (SPRITESET_PURCH_ZH_DE_1_COMP_CC, "grf/ZH_DE_1.png") {
+	TEMP_PURCH_DUAL_MU_COM(176,98,0,1)
+}
+
+switch(FEAT_TRAINS, SELF, switch_GRF_ZH_DE_1_CC, position_in_consist_from_end) {
+    0:      SPRITEGROUP_ZH_DE_1_BACK_CC;
+    SPRITEGROUP_ZH_DE_1_CC;
+}
+
+//car
+spriteset (SPRITESET_ZH_DE_1_PASS_CC, "grf/ZH_DE_1.png") {
+	TEMP_CAR_8_NEW(48,0,1)
+}
+spritegroup SPRITEGROUP_ZH_DE_1_PASS_CC {
+	loading: SPRITESET_ZH_DE_1_PASS_CC;
+	loaded:  SPRITESET_ZH_DE_1_PASS_CC;
+}
+
+spriteset (SPRITESET_ZH_DE_1_MAIL_CC, "grf/ZH_DE_1.png") {
+	TEMP_CAR_8_NEW(72,0,1)
+}
+spritegroup SPRITEGROUP_ZH_DE_1_MAIL_CC {
+	loading: SPRITESET_ZH_DE_1_MAIL_CC;
+	loaded:  SPRITESET_ZH_DE_1_MAIL_CC;
+}
+
+switch(FEAT_TRAINS,SELF,switch_ZH_DE_1_PASS_CC,PARAM2CC){
+    1: return SPRITEGROUP_ZH_DE_1_PASS_CC;
+       return SPRITEGROUP_ZH_DE_1_PASS;
+}
+
+switch(FEAT_TRAINS,SELF,switch_ZH_DE_1_MAIL_CC,PARAM2CC){
+    1: return SPRITEGROUP_ZH_DE_1_MAIL_CC;
+       return SPRITEGROUP_ZH_DE_1_MAIL;
+}
+
+switch(FEAT_TRAINS,SELF,switch_ZH_DE_1_CC,PARAM2CC){
+    1: return switch_GRF_ZH_DE_1_CC;
+       return switch_GRF_ZH_DE_1;
+}
+
+switch(FEAT_TRAINS,SELF,switch_ZH_DE_1_purchase,PURCHASE){
+    1: return SPRITESET_PURCH_ZH_DE_1_COMP;
+       return SPRITESET_PURCH_ZH_DE_1;
+}
+switch(FEAT_TRAINS,SELF,switch_ZH_DE_1_purchase_CC,PURCHASE){
+    1: return SPRITESET_PURCH_ZH_DE_1_COMP_CC;
+       return SPRITESET_PURCH_ZH_DE_1_CC;
+}
+
+switch(FEAT_TRAINS,SELF,switch_ZH_DE_1_purch_CC,PARAM2CC){
+    1: return switch_ZH_DE_1_purchase_CC;
+       return switch_ZH_DE_1_purchase;
+}
+
+item(FEAT_TRAINS, ZH_DE_1, ITEM_ZH_DE_1) {
+	property {
+		//Constants
+		model_life:	ZH_DE_1_life;
+		retire_early: 10;
+		reliability_decay:	12;
+		vehicle_life: 60;
+		refittable_cargo_classes: bitmask(CC_PASSENGERS);
+		cargo_allow_refit: [PASS, TOUR];
+		LOADINGSPEED_URBAN
+		running_cost_base: RUNNING_COST_ELECTRIC;
+		sprite_id: SPRITE_ID_NEW_TRAIN;
+		track_type: MBAHN_MGLV;
+		ai_special_flag: AI_FLAG_PASSENGER;
+		refit_cost: 0;
+		default_cargo_type: PASS;
+		visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, ENABLE_WAGON_POWER);
+		effect_spawn_model_and_powered: EFFECT_SPAWN_MODEL_NONE;
+		engine_class: ENGINE_CLASS_MAGLEV;
+		
+		//Variables
+		name:	string(STR_NAME_ZH_DE_1);
+		REGIONCAR2(GERMANY, CHINALS, LSCAR);
+		introduction_date:	date(ZH_DE_1_year,01,01);
+		cost_factor: COSTPARAM(PARAM_CONST,ZH_DE_1_pc);
+		running_cost_factor: COSTPARAM(PARAM_RUN,ZH_DE_1_rc);
+		speed: ZH_DE_1_speed km/h;
+		power: ZH_DE_1_power kW;
+		cargo_capacity: ZH_DE_1_capacity;
+		weight: ZH_DE_1_mass tons;
+		air_drag_coefficient: ZH_DE_1_ar;
+		
+		length: 8;
+		dual_headed: 1;
+		misc_flags: bitmask(TRAIN_FLAG_TILT, TRAIN_FLAG_MU, TRAIN_FLAG_2CC);
+	}
+	graphics {
+		default: switch_ZH_DE_1_CC; // Use this group
+		purchase: switch_ZH_DE_1_purch_CC; // Use this set for the menu
+		additional_text: return string(STR_DESC_ZH_DE_1);
+		can_attach_wagon: switch_can_attach_vehicle;
+	}
+	livery_override (ITEM_ZH_DE_MAIL) {
+		power: ZH_DE_1_car_power;	
+		default: switch_ZH_DE_1_MAIL_CC;
+	}
+	livery_override (ITEM_ZH_DE_PASS) {
+		power: ZH_DE_1_car_power;	
+		default: switch_ZH_DE_1_PASS_CC;
+	}
+}

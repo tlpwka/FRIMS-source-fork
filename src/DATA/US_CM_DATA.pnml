@@ -1,0 +1,28 @@
+#define RANGE_US_CM			0x300..0x3FF
+#define ITEM_US_CM_WAG		0x300
+
+#define ITEM_US_CM_1		0x302
+#define US_CM_1_year		2021
+#define US_CM_1_mass		11.5
+#define US_CM_1_speed		505
+#define US_CM_1_ar			0.067
+#define US_CM_1_power		3460
+#define US_CM_1_pc			42
+#define US_CM_1_rc			33
+#define US_CM_1_car_power	473
+#define US_CM_1_capacity	100
+#define US_CM_1_life		VEHICLE_NEVER_EXPIRES
+#define US_CM_1_misc	TRAIN_FLAG_AUTOREFIT
+
+#define ITEM_US_CM_2		0x303
+#define US_CM_2_year		2034
+#define US_CM_2_mass		15.7
+#define US_CM_2_speed		603
+#define US_CM_2_ar			0.050
+#define US_CM_2_power		5728
+#define US_CM_2_pc			53
+#define US_CM_2_rc			42
+#define US_CM_2_car_power	652
+#define US_CM_2_capacity	0
+#define US_CM_2_life		VEHICLE_NEVER_EXPIRES
+#define US_CM_1_misc	TRAIN_FLAG_AUTOREFIT

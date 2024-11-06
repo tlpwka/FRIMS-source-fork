@@ -1,0 +1,15 @@
+#define RANGE_ZH_HS			0x400..0x4FF
+#define ITEM_ZH_HS_PASS		0x400
+#define ITEM_ZH_HS_MAIL		0x401
+
+#define ITEM_ZH_HS_1		0x402
+#define ZH_HS_1_year		2021
+#define ZH_HS_1_mass		51.3
+#define ZH_HS_1_speed		600
+#define ZH_HS_1_ar			0.013
+#define ZH_HS_1_power		6203
+#define ZH_HS_1_pc			152
+#define ZH_HS_1_rc			140
+#define ZH_HS_1_car_power	1034
+#define ZH_HS_1_life		VEHICLE_NEVER_EXPIRES
+//#define ZH_HS_1_life		45

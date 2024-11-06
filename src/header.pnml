@@ -1,0 +1,190 @@
+#define JAPANHS param_japan_highspeed
+#define SKHS param_sk_highspeed
+#define SKLS param_sk_lowspeed
+#define CHINAHS param_china_highspeed
+#define CHINALS param_china_lowspeed
+#define GERMANYLS param_germany_lowspeed
+#define US param_us
+
+#define NOREGION 0
+
+#define REGION(REGION1,REGION2) climates_available: (REGION1 || REGION2) ? ALL_CLIMATES : NO_CLIMATE
+#define REGIONCAR(REGION1,REGION2,CAR1) climates_available: ((REGION1 || REGION2) && !CAR1) ? ALL_CLIMATES : NO_CLIMATE
+#define REGIONCAR2(REGION1,REGION2,CAR1) climates_available: ((REGION1 || REGION2) && CAR1) ? ALL_CLIMATES : NO_CLIMATE
+
+#define COSTPARAM(param,basecost) (param == 0) ? basecost/4/2 : (param == 1) ? basecost/2/2 : (param == 4) ? basecost*2/2 : (param == 5 && basecost/2 < 255) ? basecost*3/2 : (param == 3) ? basecost*5/4/2 : (param == 6 && basecost/2 < 255) ? basecost*5/2 : (basecost/2 >= 255) ? 255 : basecost/2
+
+grf {
+	grfid:	"EN\19\01";
+	name:	string(STR_GRF_NAME);
+	desc:	string(STR_GRF_DESC);
+	version:	2;
+	min_compatible_version: 1;
+	param {
+		LOADSPEEDPARAM {
+			type:    int;
+			name:    string(STR_LOAD);
+			desc:    string(STR_LOAD_DESC);
+			min_value: 0;
+			max_value: 2;
+			def_value: 1;
+			names: {
+				0: string(STR_LOAD_0);
+				1: string(STR_LOAD_1);
+				2: string(STR_LOAD_2);
+			};
+		}
+	}
+	param {
+		PARAM_CONST {
+			type:    int;
+			name:    string(STR_CC);
+			desc:    string(STR_CC_DESC);
+			min_value: 0;
+			max_value: 5;
+			def_value: 2;
+			names: {
+				0: string(STR_CC_0);
+				1: string(STR_CC_1A);
+				2: string(STR_CC_2A);
+				3: string(STR_CC_5A);
+				4: string(STR_CC_3);
+				5: string(STR_CC_4);
+			};
+		}
+	}
+	param {
+		PARAM_RUN {
+			type:    int;
+			name:    string(STR_RC);
+			desc:    string(STR_RC_DESC);
+			min_value: 0;
+			max_value: 5;
+			def_value: 2;
+			names: {
+				0: string(STR_CC_0);
+				1: string(STR_CC_1);
+				2: string(STR_CC_2);
+				3: string(STR_CC_5);
+				4: string(STR_CC_3);
+				5: string(STR_CC_4A);
+			};
+		}
+	}
+	param {
+		PARAM_CONST_HS {
+			type:    int;
+			name:    string(STR_CC_HS);
+			desc:    string(STR_CC_HS_DESC);
+			min_value: 0;
+			max_value: 5;
+			def_value: 2;
+			names: {
+				0: string(STR_CC_0);
+				1: string(STR_CC_1A);
+				2: string(STR_CC_2A);
+				3: string(STR_CC_5A);
+				4: string(STR_CC_3);
+				5: string(STR_CC_4);
+			};
+		}
+	}
+	param {
+		PARAM_RUN_HS {
+			type:    int;
+			name:    string(STR_RC_HS);
+			desc:    string(STR_RC_HS_DESC);
+			min_value: 0;
+			max_value: 5;
+			def_value: 2;
+			names: {
+				0: string(STR_CC_0);
+				1: string(STR_CC_1);
+				2: string(STR_CC_2);
+				3: string(STR_CC_5);
+				4: string(STR_CC_3);
+				5: string(STR_CC_4A);
+			};
+		}
+	}
+	param {
+		JAPANHS {
+			type:	bool;
+			name:	string(STR_PARAM_JAPANHS);
+			desc:	string(STR_PARAM_JAPANHS_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		SKHS {
+			type:	bool;
+			name:	string(STR_PARAM_SKHS);
+			desc:	string(STR_PARAM_SKHS_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		SKLS {
+			type:	bool;
+			name:	string(STR_PARAM_SKLS);
+			desc:	string(STR_PARAM_SKLS_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		CHINAHS {
+			type:	bool;
+			name:	string(STR_PARAM_CHINAHS);
+			desc:	string(STR_PARAM_CHINAHS_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		CHINALS {
+			type:	bool;
+			name:	string(STR_PARAM_CHINALS);
+			desc:	string(STR_PARAM_CHINALS_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		GERMANY {
+			type:	bool;
+			name:	string(STR_PARAM_GERMANY);
+			desc:	string(STR_PARAM_GERMANY_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		US {
+			type:	bool;
+			name:	string(STR_PARAM_US);
+			desc:	string(STR_PARAM_US_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		PURCHASE {
+			type:	bool;
+			name:	string(STR_PARAM_PURCHASE);
+			desc:	string(STR_PARAM_PURCHASE_DESC);
+			def_value: 0;
+		}
+	}
+	param {
+		PARAM2CC {
+			type:	bool;
+			name:	string(STR_PARAM_2CC);
+			desc:	string(STR_PARAM_2CC_DESC);
+			def_value: 0;
+		}
+	}
+	param {
+		LSCAR {
+			type:	bool;
+			name:	string(STR_PARAM_LSCAR);
+			desc:	string(STR_PARAM_LSCAR_DESC);
+			def_value: 1;
+		}
+	}
+}

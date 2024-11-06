@@ -1,0 +1,93 @@
+//Spritesets
+spriteset (SPRITESET_ZH_HS_MAIL, "grf/ZH_HS_1.png") {
+	TEMP_CAR_8_NEW(72,0,0)
+}
+spritegroup SPRITEGROUP_ZH_HS_MAIL {
+	loading: SPRITESET_ZH_HS_MAIL;
+	loaded:  SPRITESET_ZH_HS_MAIL;
+}
+
+spriteset (SPRITESET_PURCH_ZH_HS_MAIL, "grf/ZH_HS_1.png") {
+	TEMP_PURCH_SINGLE_NEW(176,28,0,1)
+}
+spriteset (SPRITESET_PURCH_ZH_HS_MAIL_COMP, "grf/ZH_HS_1.png") {
+	TEMP_PURCH_SINGLE_NEW_COM(176,28+14*3,0,1)
+}
+
+switch(FEAT_TRAINS,SELF,switch_ZH_HS_MAIL_purchase,PURCHASE){
+    1: return SPRITESET_PURCH_ZH_HS_MAIL_COMP;
+       return SPRITESET_PURCH_ZH_HS_MAIL;
+}
+
+//2cc
+spriteset (SPRITESET_ZH_HS_MAIL_CC, "grf/ZH_HS_1.png") {
+	TEMP_CAR_8_NEW(69+96,0,0)
+}
+spritegroup SPRITEGROUP_ZH_HS_MAIL_CC {
+	loading: SPRITESET_ZH_HS_MAIL_CC;
+	loaded:  SPRITESET_ZH_HS_MAIL_CC;
+}
+
+spriteset (SPRITESET_PURCH_ZH_HS_MAIL_CC, "grf/ZH_HS_1.png") {
+	TEMP_PURCH_SINGLE_NEW(176,112,0,1)
+}
+spriteset (SPRITESET_PURCH_ZH_HS_MAIL_COMP_CC, "grf/ZH_HS_1.png") {
+	TEMP_PURCH_SINGLE_NEW_COM(176,154,0,1)
+}
+
+switch(FEAT_TRAINS,SELF,switch_ZH_HS_MAIL_purchase_CC,PURCHASE){
+    1: return SPRITESET_PURCH_ZH_HS_MAIL_COMP_CC;
+       return SPRITESET_PURCH_ZH_HS_MAIL_CC;
+}
+
+switch(FEAT_TRAINS,SELF,switch_ZH_HS_MAIL_CC,PARAM2CC){
+    1: return SPRITEGROUP_ZH_HS_MAIL_CC;
+       return SPRITEGROUP_ZH_HS_MAIL;
+}
+
+switch(FEAT_TRAINS,SELF,switch_ZH_HS_MAIL_purch_CC,PARAM2CC){
+    1: return switch_ZH_HS_MAIL_purchase_CC;
+       return switch_ZH_HS_MAIL_purchase;
+}
+
+		//Passenger Car
+item(FEAT_TRAINS, ZH_HS_MAIL, ITEM_ZH_HS_MAIL) {
+	property {
+		//Basic
+		model_life:	VEHICLE_NEVER_EXPIRES;
+		reliability_decay: 7;
+		vehicle_life: 45;
+		refittable_cargo_classes: bitmask(CC_MAIL);
+		cargo_allow_refit: [MAIL];
+		LOADINGSPEED_HIGHSPEED
+		running_cost_base: RUNNING_COST_ELECTRIC;
+		misc_flags: bitmask(TRAIN_FLAG_2CC);
+		sprite_id: SPRITE_ID_NEW_TRAIN;
+		track_type: THREEPHASEHS_MGLV;
+		ai_special_flag: AI_FLAG_PASSENGER;
+		default_cargo_type: PASS;
+		visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, ENABLE_WAGON_POWER);
+		effect_spawn_model_and_powered: EFFECT_SPAWN_MODEL_NONE;
+		refit_cost: 0;
+		engine_class: ENGINE_CLASS_MAGLEV;
+		
+		//Trains
+		name: string(STR_NAME_ZH_HS_MAIL);
+		REGION(CHINAHS, NOREGION);
+		introduction_date:	date(ZH_HS_1_year,01,01);
+		cost_factor: COSTPARAM(PARAM_CONST_HS,106);
+		running_cost_factor: COSTPARAM(PARAM_RUN_HS,18);
+		power: 0 kW;
+		cargo_capacity: 68;
+		weight: 50 tons;
+		
+		length: 8;
+		dual_headed: 0;
+		misc_flags: bitmask(TRAIN_FLAG_2CC);
+	}
+	graphics {
+		default: switch_ZH_HS_MAIL_CC; // Use this switch to set sprite
+		purchase: switch_ZH_HS_MAIL_purch_CC;
+		additional_text: return string(STR_DESC_ZH_HS_MAIL);
+	}
+}

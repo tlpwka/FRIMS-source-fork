@@ -1,0 +1,213 @@
+//US_CM_2
+
+spriteset (SPRITESET_US_CM_2_0, "grf/US_CM_2.png") {
+	TEMP_DOUBLE_3_FRONT(0,0,1)
+}
+spriteset (SPRITESET_US_CM_2_0_BACK, "grf/US_CM_2.png") {
+	TEMP_DOUBLE_3_BACK(14,0,1)
+}
+spritegroup SPRITEGROUP_US_CM_2_0 {
+	loading: SPRITESET_US_CM_2_0;
+	loaded:  SPRITESET_US_CM_2_0;
+}
+spritegroup SPRITEGROUP_US_CM_2_0_BACK {
+	loading: SPRITESET_US_CM_2_0_BACK;
+	loaded:  SPRITESET_US_CM_2_0_BACK;
+}
+switch(FEAT_TRAINS, SELF, SWITCH_US_CM_2_0, position_in_consist_from_end) {
+    0:      SPRITEGROUP_US_CM_2_0_BACK;
+    SPRITEGROUP_US_CM_2_0;
+}
+//2cc
+spriteset (SPRITESET_US_CM_2_CC_0, "grf/US_CM_2.png") {
+	TEMP_DOUBLE_3_FRONT(212+0,0,1)
+}
+spriteset (SPRITESET_US_CM_2_CC_0_BACK, "grf/US_CM_2.png") {
+	TEMP_DOUBLE_3_BACK(212+14,0,1)
+}
+spritegroup SPRITEGROUP_US_CM_2_CC_0 {
+	loading: SPRITESET_US_CM_2_CC_0;
+	loaded:  SPRITESET_US_CM_2_CC_0;
+}
+spritegroup SPRITEGROUP_US_CM_2_CC_0_BACK {
+	loading: SPRITESET_US_CM_2_CC_0_BACK;
+	loaded:  SPRITESET_US_CM_2_CC_0_BACK;
+}
+switch(FEAT_TRAINS, SELF, SWITCH_US_CM_2_CC_0, position_in_consist_from_end) {
+    0:      SPRITEGROUP_US_CM_2_CC_0_BACK;
+    SPRITEGROUP_US_CM_2_CC_0;
+}
+
+//Spritesets
+
+spriteset (SPRITESET_US_CM_20, "grf/US_CM_2.png") {
+	TEMP_CAR_7(28+0,0,1)
+}
+spriteset (SPRITESET_US_CM_21, "grf/US_CM_2.png") {
+	TEMP_CAR_7(28+23*1,0,1)
+}
+spriteset (SPRITESET_US_CM_22, "grf/US_CM_2.png") {
+	TEMP_CAR_7(28+23*2,0,1)
+}
+spriteset (SPRITESET_US_CM_23, "grf/US_CM_2.png") {
+	TEMP_CAR_7(28+23*3,0,1)
+}
+spriteset (SPRITESET_US_CM_24, "grf/US_CM_2.png") {
+	TEMP_CAR_7(28+23*4,0,1)
+}
+spriteset (SPRITESET_US_CM_25, "grf/US_CM_2.png") {
+	TEMP_CAR_7(28+23*5,0,1)
+}
+spriteset (SPRITESET_US_CM_26, "grf/US_CM_2.png") {
+	TEMP_CAR_7(28+23*6,0,1)
+}
+spriteset (SPRITESET_US_CM_27, "grf/US_CM_2.png") {
+	TEMP_CAR_7(28+23*7,0,1)
+}
+
+spritegroup SPRITEGROUP_US_CM_21 {
+	loading: [SPRITESET_US_CM_20,SPRITESET_US_CM_21];
+	loaded:  [SPRITESET_US_CM_20,SPRITESET_US_CM_21];
+}
+spritegroup SPRITEGROUP_US_CM_22 {
+	loading: [SPRITESET_US_CM_20,SPRITESET_US_CM_22];
+	loaded:  [SPRITESET_US_CM_20,SPRITESET_US_CM_22];
+}
+spritegroup SPRITEGROUP_US_CM_23 {
+	loading: [SPRITESET_US_CM_20,SPRITESET_US_CM_23];
+	loaded:  [SPRITESET_US_CM_20,SPRITESET_US_CM_23];
+}
+spritegroup SPRITEGROUP_US_CM_24 {
+	loading: [SPRITESET_US_CM_20,SPRITESET_US_CM_24];
+	loaded:  [SPRITESET_US_CM_20,SPRITESET_US_CM_24];
+}
+spritegroup SPRITEGROUP_US_CM_25 {
+	loading: [SPRITESET_US_CM_20,SPRITESET_US_CM_25];
+	loaded:  [SPRITESET_US_CM_20,SPRITESET_US_CM_25];
+}
+spritegroup SPRITEGROUP_US_CM_26 {
+	loading: [SPRITESET_US_CM_20,SPRITESET_US_CM_26];
+	loaded:  [SPRITESET_US_CM_20,SPRITESET_US_CM_26];
+}
+spritegroup SPRITEGROUP_US_CM_27 {
+	loading: [SPRITESET_US_CM_20,SPRITESET_US_CM_27];
+	loaded:  [SPRITESET_US_CM_20,SPRITESET_US_CM_27];
+}
+random_switch(FEAT_TRAINS, SELF, SPRITEGROUP_US_CM_2) {
+	4: SPRITEGROUP_US_CM_21;
+	4: SPRITEGROUP_US_CM_22;
+	4: SPRITEGROUP_US_CM_23;
+	4: SPRITEGROUP_US_CM_24;
+	5: SPRITEGROUP_US_CM_25;
+	6: SPRITEGROUP_US_CM_26;
+	7: SPRITEGROUP_US_CM_27;
+}
+
+spriteset (SPRITESET_PURCH_US_CM_2, "grf/US_CM_2.png") {
+	TEMP_PURCH_DUAL_MU(96,0,0,1)
+}
+spriteset (SPRITESET_PURCH_US_CM_2_COMP, "grf/US_CM_2.png") {
+	TEMP_PURCH_DUAL_MU_COM(96,28,0,1)
+}
+
+//2cc
+spriteset (SPRITESET_US_CM_20_CC, "grf/US_CM_2.png") {
+	TEMP_CAR_7(240+0,0,1)
+}
+spriteset (SPRITESET_US_CM_21_CC, "grf/US_CM_2.png") {
+	TEMP_CAR_7(240+23*1,0,1)
+}
+spriteset (SPRITESET_US_CM_22_CC, "grf/US_CM_2.png") {
+	TEMP_CAR_7(240+23*2,0,1)
+}
+spritegroup SPRITEGROUP_US_CM_21_CC {
+	loading: [SPRITESET_US_CM_20_CC,SPRITESET_US_CM_21_CC];
+	loaded:  [SPRITESET_US_CM_20_CC,SPRITESET_US_CM_21_CC];
+}
+spritegroup SPRITEGROUP_US_CM_22_CC {
+	loading: [SPRITESET_US_CM_20_CC,SPRITESET_US_CM_22_CC];
+	loaded:  [SPRITESET_US_CM_20_CC,SPRITESET_US_CM_22_CC];
+}
+random_switch(FEAT_TRAINS, SELF, SPRITEGROUP_US_CM_2_CC) {
+	4: SPRITEGROUP_US_CM_21_CC;
+	4: SPRITEGROUP_US_CM_22_CC;
+}
+
+spriteset (SPRITESET_PURCH_US_CM_2_CC, "grf/US_CM_2.png") {
+	TEMP_PURCH_DUAL_MU(96,56,0,1)
+}
+spriteset (SPRITESET_PURCH_US_CM_2_COMP_CC, "grf/US_CM_2.png") {
+	TEMP_PURCH_DUAL_MU_COM(96,84,0,1)
+}
+
+switch(FEAT_TRAINS,SELF,switch_US_CM_2_WAG_CC,PARAM2CC){
+    1: return SPRITEGROUP_US_CM_2_CC;
+       return SPRITEGROUP_US_CM_2;
+}
+
+switch(FEAT_TRAINS,SELF,switch_US_CM_2_CC,PARAM2CC){
+    1: return SWITCH_US_CM_2_CC_0;
+       return SWITCH_US_CM_2_0;
+}
+
+switch(FEAT_TRAINS,SELF,switch_US_CM_2_purchase,PURCHASE){
+    1: return SPRITESET_PURCH_US_CM_2_COMP;
+       return SPRITESET_PURCH_US_CM_2;
+}
+switch(FEAT_TRAINS,SELF,switch_US_CM_2_purchase_CC,PURCHASE){
+    1: return SPRITESET_PURCH_US_CM_2_COMP_CC;
+       return SPRITESET_PURCH_US_CM_2_CC;
+}
+
+switch(FEAT_TRAINS,SELF,switch_US_CM_2_purch_CC,PARAM2CC){
+    1: return switch_US_CM_2_purchase_CC;
+       return switch_US_CM_2_purchase;
+}
+
+item(FEAT_TRAINS, US_CM_2, ITEM_US_CM_2) {
+	property {
+		//Constants
+		model_life:	US_CM_2_life;
+		retire_early: 10;
+		reliability_decay:	12;
+		vehicle_life: 60;
+		refittable_cargo_classes: ALL_CARGO_CLASSES & ~bitmask(CC_PASSENGERS, CC_MAIL);\
+		LOADINGSPEED_CARGO
+		running_cost_base: RUNNING_COST_ELECTRIC;
+		misc_flags: bitmask(TRAIN_FLAG_2CC);
+		sprite_id: SPRITE_ID_NEW_TRAIN;
+		track_type: INDUCTION_MGLV;
+		ai_special_flag: AI_FLAG_CARGO;
+		default_cargo_type: GOOD;
+		refit_cost: 0;
+		visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, ENABLE_WAGON_POWER);
+		effect_spawn_model_and_powered: EFFECT_SPAWN_MODEL_NONE;
+		engine_class: ENGINE_CLASS_MAGLEV;
+		
+		//Variables
+		name:	string(STR_NAME_US_CM_2);
+		REGION(US, NOREGION);
+		introduction_date:	date(US_CM_2_year,01,01);
+		cost_factor: COSTPARAM(PARAM_CONST,US_CM_2_pc);
+		running_cost_factor: COSTPARAM(PARAM_RUN,US_CM_2_rc);
+		speed: US_CM_2_speed km/h;
+		power: US_CM_2_power kW;
+		cargo_capacity: US_CM_2_capacity;
+		weight: US_CM_2_mass tons;
+		air_drag_coefficient: US_CM_2_ar;
+		
+		length: 3;
+		dual_headed: 1;
+		misc_flags: bitmask(TRAIN_FLAG_TILT, TRAIN_FLAG_MU, TRAIN_FLAG_2CC, TRAIN_FLAG_AUTOREFIT);
+	}
+	graphics {
+		default: switch_US_CM_2_CC; // Use this group
+		purchase: switch_US_CM_2_purch_CC; // Use this set for the menu
+		additional_text: return string(STR_DESC_US_CM_2);
+		can_attach_wagon: switch_can_attach_vehicle;
+	}
+	livery_override (ITEM_US_CM_WAG) {
+		power: US_CM_2_car_power;	
+		default: switch_US_CM_2_WAG_CC;
+	}
+}

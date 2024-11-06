@@ -1,0 +1,15 @@
+#define RANGE_ZH_MG_3		0x500..0x5FF
+#define ITEM_ZH_MG_3_PASS	0x500
+#define ITEM_ZH_MG_3_MAIL	0x501
+
+#define ITEM_ZH_MG_3_1		0x502
+#define ZH_MG_3_1_year		2022
+#define ZH_MG_3_1_mass		32.5
+#define ZH_MG_3_1_speed		200
+#define ZH_MG_3_1_ar		0.040
+#define ZH_MG_3_1_power		4219
+#define ZH_MG_3_1_pc		115
+#define ZH_MG_3_1_rc		51
+#define ZH_MG_3_1_car_power	471
+#define ZH_MG_3_1_life		VEHICLE_NEVER_EXPIRES
+//#define ZH_MG_3_1_life		45

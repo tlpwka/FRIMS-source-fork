@@ -1,0 +1,47 @@
+#define RANGE_SK_HS			0x100..0x1FF
+#define ITEM_SK_HS_PASS		0x100
+#define ITEM_SK_HS_MAIL		0x101
+
+#define ITEM_SK_HS_1		0x102
+#define SK_HS_1_year		2048
+#define SK_HS_1_mass		50.0
+#define SK_HS_1_speed		550
+#define SK_HS_1_ar			0.015
+#define SK_HS_1_power		5090
+#define SK_HS_1_pc			140
+#define SK_HS_1_rc			128
+#define SK_HS_1_car_power	848
+#define SK_HS_1_life		32
+
+#define ITEM_SK_HS_2		0x103
+#define SK_HS_2_year		2065
+#define SK_HS_2_mass		51.9
+#define SK_HS_2_speed		600
+#define SK_HS_2_ar			0.013
+#define SK_HS_2_power		6222
+#define SK_HS_2_pc			152
+#define SK_HS_2_rc			133
+#define SK_HS_2_car_power	1037
+#define SK_HS_2_life		32
+
+#define ITEM_SK_HS_3		0x104
+#define SK_HS_3_year		2084
+#define SK_HS_3_mass		49.7
+#define SK_HS_3_speed		650
+#define SK_HS_3_ar			0.012
+#define SK_HS_3_power		6513
+#define SK_HS_3_pc			170
+#define SK_HS_3_rc			153
+#define SK_HS_3_car_power	1086
+#define SK_HS_3_life		VEHICLE_NEVER_EXPIRES
+
+#define ITEM_SK_HS_4		0x105
+#define SK_HS_4_year		2101
+#define SK_HS_4_mass		50.2
+#define SK_HS_4_speed		700
+#define SK_HS_4_ar			0.010
+#define SK_HS_4_power		8128
+#define SK_HS_4_pc			173
+#define SK_HS_4_rc			147
+#define SK_HS_4_car_power	1355
+#define SK_HS_4_life		VEHICLE_NEVER_EXPIRES

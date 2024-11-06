@@ -1,0 +1,4 @@
+VERSION        :2024.11.04
+RECENT_UPDATED :2024.11.04
+AUTHOR_WEBSITE :https://domain.com
+AUTHOR_EMAIL   :your_email@address.com

@@ -1,0 +1,85 @@
+// Define GRF
+#include "src/header.pnml"
+
+//Useable cargo
+cargotable {
+	PASS, TOUR, MAIL, GOOD
+}
+
+//disable original maglev vehicles
+disable_item(FEAT_TRAINS, 0, 115);//84
+
+basecost {
+	PR_BUILD_VEHICLE_TRAIN:		1;
+	PR_BUILD_VEHICLE_WAGON:		3;
+	PR_RUNNING_TRAIN_ELECTRIC:	3; //Wagon running costs
+	//Electric running costs are not used
+}
+train_width_32_px = 1;
+
+#include "src/template.pnml"
+#include "src/loadspeed.pnml"
+#include "src/railtypetable.pnml"
+
+//Imports data
+#include "src/DATA/JP_HS_DATA.pnml"
+#include "src/DATA/SK_HS_DATA.pnml"
+#include "src/DATA/ZH_HS_DATA.pnml"
+#include "src/DATA/ZH_DE_DATA.pnml"
+#include "src/DATA/US_CM_DATA.pnml"
+#include "src/DATA/ZH_MG_2_DATA.pnml"
+#include "src/DATA/ZH_MG_3_DATA.pnml"
+
+#include "src/wagon_attach.pnml"
+
+//Imports trains
+//1.0
+//SC-Maglev
+#include "src/MAGLEV/JP_HS_PASS.pnml"
+#include "src/MAGLEV/JP_HS_MAIL.pnml"
+#include "src/MAGLEV/JP_HS_1.pnml"
+#include "src/MAGLEV/JP_HS_2.pnml"
+#include "src/MAGLEV/JP_HS_3.pnml"
+#include "src/MAGLEV/JP_HS_4.pnml"
+#include "src/MAGLEV/JP_HS_5.pnml"
+#include "src/MAGLEV/JP_HS_6.pnml"
+//SUMA
+#include "src/MAGLEV/SK_HS_PASS.pnml"
+#include "src/MAGLEV/SK_HS_MAIL.pnml"
+#include "src/MAGLEV/SK_HS_1.pnml"
+//DE
+#include "src/MAGLEV/ZH_DE_PASS.pnml"
+#include "src/MAGLEV/ZH_DE_MAIL.pnml"
+#include "src/MAGLEV/ZH_DE_1.pnml"
+#include "src/MAGLEV/ZH_DE_2.pnml"
+//US
+#include "src/MAGLEV/US_CM_1.pnml"
+#include "src/MAGLEV/US_CM_2.pnml"
+#include "src/MAGLEV/US_CM_WAG.pnml"
+
+//1.1
+//SC-Maglev
+#include "src/MAGLEV/JP_HS_7.pnml"
+//SUMA
+#include "src/MAGLEV/SK_HS_2.pnml"
+#include "src/MAGLEV/SK_HS_3.pnml"
+#include "src/MAGLEV/SK_HS_4.pnml"
+//ZH
+#include "src/MAGLEV/ZH_HS_PASS.pnml"
+#include "src/MAGLEV/ZH_HS_MAIL.pnml"
+#include "src/MAGLEV/ZH_HS_1.pnml"
+//ZH3.0
+#include "src/MAGLEV/ZH_MG_3_PASS.pnml"
+//#include "src/MAGLEV/ZH_MG_3_MAIL.pnml"
+#include "src/MAGLEV/ZH_MG_3_1.pnml"
+//ZH2.0
+#include "src/MAGLEV/ZH_MG_2_PASS.pnml"
+//#include "src/MAGLEV/ZH_MG_2_MAIL.pnml"
+#include "src/MAGLEV/ZH_MG_2_1.pnml"
+
+
+#include "src/sorting.pnml"				//Sorts the maglevs
+
+
+//cd /mnt/c/Temp/RIMS
+//make -B
