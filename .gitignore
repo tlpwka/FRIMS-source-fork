@@ -1,0 +1,7 @@
+
+/.nmlcache
+*.cacheindex
+*.ods#
+*.kate-swp
+.DS_Store
+*.tar
